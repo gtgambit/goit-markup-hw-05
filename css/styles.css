@@ -31,21 +31,18 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
   display: block;
 }
 
-a {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 button {
   cursor: pointer;
-  transition-property: color, background-color, box-shadow;
+  transition-property: shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -112,10 +109,29 @@ body {
   background-color: var(--footer-color-text-secondary);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.icon-closed-modal {
+
+.close-button {
+  margin-left: 498px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 150px;
+  align-items: center;
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover {
+  fill: var(--text-color-accent);
+  border: 1px solid var(--text-color-accent);
+}
+
+.close-icon {
   height: 11px;
   width: 11px;
 }
+
 .modal-closed:hover use {
   fill: currentColor;
 }
@@ -216,16 +232,16 @@ body {
 .nav-link.active {
   color: var(--text-color-accent);
 }
-.nav-link.active::after {
+.nav-link.active::before {
   content: "";
   display: block;
   width: 100%;
   height: 4px;
-  position: absolute;
   bottom: 10px;
   left: 0;
   color: var(--text-color-accent);
   border-radius: 2px;
+  top: 0;
 }
 
 .contacts-link {
@@ -356,24 +372,23 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
-.wedo-desc {
+.wedo-container {
   position: relative;
 }
 
 .wedo-item-text {
   position: absolute;
-  min-width: 156px;
-  top: 0;
-  left: 0;
-
-  font-family: "Roboto";
-  font-style: normal;
+  bottom: 0;
   font-weight: 700;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
+  line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wedo-list {
@@ -383,6 +398,7 @@ body {
 
 .wedo-item {
   list-style-type: none;
+  position: relative;
 }
 
 /* section team */
@@ -407,7 +423,6 @@ body {
 .team-card {
   width: 270px;
   background: #ffffff;
-  /* material shadow v1 */
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -446,6 +461,9 @@ body {
   align-items: center;
   border-radius: 50%;
   color: var(--regular-client);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-icon {
@@ -499,6 +517,10 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   color: var(--regular-client);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-logo {
   width: 106px;
@@ -597,6 +619,9 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: var(--footer-color-text-secondary);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link-icon-footer + .social-link-icon-footer {
@@ -657,6 +682,9 @@ body {
 }
 .gallery-list-link {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-list-link:hover,
