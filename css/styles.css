@@ -227,21 +227,20 @@ body {
 
 .nav-link {
   text-decoration: none;
-  position: relative;
 }
 .nav-link.active {
   color: var(--text-color-accent);
+  position: relative;
 }
-.nav-link.active::before {
+.nav-link.active::after {
   content: "";
   display: block;
   width: 100%;
   height: 4px;
-  bottom: 10px;
-  left: 0;
-  color: var(--text-color-accent);
+  bottom: -33px;
+  background-color: var(--text-color-accent);
   border-radius: 2px;
-  top: 0;
+  position: absolute;
 }
 
 .contacts-link {
@@ -674,6 +673,9 @@ body {
 .gallery {
   padding: 94px 0;
 }
+.gallery-item {
+  position: relative;
+}
 
 .gallery-list {
   display: flex;
@@ -682,6 +684,7 @@ body {
 }
 .gallery-list-link {
   display: block;
+  position: relative;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -693,8 +696,37 @@ body {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.gallery-list-link:hover .card-info,
+.gallery-list-link:focus .card-info {
+  transform: translateY(-100%);
+}
+
 .gallery-list .gallery-item {
   list-style: none;
+}
+.wrapper-relative {
+  position: relative;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 294px;
+  overflow: hidden;
+}
+
+.wrapper-absolute {
+  position: absolute;
+}
+
+.card-info {
+  color: #ffff;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+  width: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  transition: all;
+  transition-duration: 1s;
 }
 
 .gallery-info-wrapper {
