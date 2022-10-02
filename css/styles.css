@@ -31,9 +31,6 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
@@ -42,9 +39,6 @@ img {
 
 button {
   cursor: pointer;
-  transition-property: shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -162,7 +156,6 @@ body {
   border: 1px solid #ececec;
 }
 .logo {
-  text-decoration: none;
   color: var(--text-color-accent);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -226,11 +219,16 @@ body {
 }
 
 .nav-link {
-  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link.active {
   color: var(--text-color-accent);
   position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link.active::after {
   content: "";
@@ -244,16 +242,21 @@ body {
 }
 
 .contacts-link {
-  text-decoration: none;
   color: var(--text-color-secondary);
   display: flex;
   align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-header {
   margin-right: 10px;
   fill: currentColor;
   margin-left: 50px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-item .email {
@@ -308,6 +311,9 @@ body {
 }
 
 .hero-btn {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -460,7 +466,7 @@ body {
   align-items: center;
   border-radius: 50%;
   color: var(--regular-client);
-  transition-property: background-color;
+  transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -517,7 +523,7 @@ body {
   border-radius: 4px;
   color: var(--regular-client);
 
-  transition-property: color;
+  transition-property: color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -547,7 +553,6 @@ body {
 }
 
 .logo-bsmt {
-  text-decoration: none;
   color: var(--text-color-accent);
 
   font-family: "Raleway";
@@ -574,12 +579,13 @@ body {
 
 .adds {
   color: var(--footer-color-text-secondary);
-  text-decoration: none;
 }
 
 .bsmt-item {
-  text-decoration: none;
   color: var(--footer-color-text-primary);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bsmt-item:first-child {
   margin-top: 20px;
@@ -618,7 +624,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: var(--footer-color-text-secondary);
-  transition-property: background-color;
+  transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -656,6 +662,10 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn-text {
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   background-color: #f5f4fa;
   border: 0px;
   border-radius: 4px;
